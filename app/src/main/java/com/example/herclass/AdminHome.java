@@ -50,34 +50,38 @@ public class AdminHome extends AppCompatActivity {
     }
 
     private void buscarUsuario() {
-        String id = txtbuscar.getText().toString();
+        String email = txtbuscar.getText().toString().trim();
 
-        if (id.isEmpty()) {
-            Toast.makeText(this, "Ingresa un ID", Toast.LENGTH_SHORT).show();
+        if (email.isEmpty()) {
+            Toast.makeText(this, "Ingresa un correo", Toast.LENGTH_SHORT).show();
             return;
         }
 
-        dbRef.child(id).addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot snapshot) {
-                if (snapshot.exists()) {
-                    String nombre = snapshot.child("nombre").getValue(String.class);
-                    String contra = snapshot.child("contraseña").getValue(String.class);
+        dbRef.orderByChild("nombre").equalTo(email)
+                .addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(DataSnapshot snapshot) {
+                        if (snapshot.exists()) {
+                            for (DataSnapshot usuarioSnap : snapshot.getChildren()) {
+                                String uid = usuarioSnap.getKey();
+                                String contra = usuarioSnap.child("contraseña").getValue(String.class);
 
-                    resultado1.setText(nombre);
-                    resultado2.setText(contra);
-                } else {
-                    Toast.makeText(AdminHome.this, "ID no encontrado", Toast.LENGTH_SHORT).show();
-                    resultado1.setText("");
-                    resultado2.setText("");
-                }
-            }
+                                resultado1.setText(uid);
+                                resultado2.setText(contra);
+                                break;
+                            }
+                        } else {
+                            Toast.makeText(AdminHome.this, "Correo no encontrado", Toast.LENGTH_SHORT).show();
+                            resultado1.setText("");
+                            resultado2.setText("");
+                        }
+                    }
 
-            @Override
-            public void onCancelled(DatabaseError error) {
-                Toast.makeText(AdminHome.this, "Error de base de datos", Toast.LENGTH_SHORT).show();
-            }
-        });
+                    @Override
+                    public void onCancelled(DatabaseError error) {
+                        Toast.makeText(AdminHome.this, "Error de base de datos", Toast.LENGTH_SHORT).show();
+                    }
+                });
     }
     public void Regresos(View view){
         Intent i = new Intent(this, MainActivity.class);
