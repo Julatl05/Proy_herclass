@@ -23,4 +23,9 @@ public class AdminHome extends AppCompatActivity {
         Intent i = new Intent(this, MainActivity.class);
         startActivity(i);
     }
+
+    public void ad(View view){
+        Intent i = new Intent(this, administracion.class);
+        startActivity(i);
+    }
 }
