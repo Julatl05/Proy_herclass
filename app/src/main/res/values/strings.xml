@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">HerClass</string>
+    <string name="email">Email</string>
+    <string name="Contra">Contraseña</string>
+    <string name="inicio">Iniciar Sesion</string>
+    <string name="regis">Registrate</string>
+    <string name="contra2">Repita la Contraseña</string>
+    <string name="Bienvenida">Bienvenido</string>
+    <string name="regreso">Regresar</string>
+    <string name="admin">Administrador</string>
+    <string name="ext">Salir</string>
+    <string name="ad">Administracion</string>
+</resources>

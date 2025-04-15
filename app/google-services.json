@@ -1,0 +1,67 @@
+{
+  "project_info": {
+    "project_number": "1052536693818",
+    "project_id": "herclass-b0ee8",
+    "storage_bucket": "herclass-b0ee8.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1052536693818:android:7ad27aca4b36d7b1e8c103",
+        "android_client_info": {
+          "package_name": "com.example.herclass"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCp6LKtCjqreJ-buUvFlISDc_2hHvJm56U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1052536693818:android:e935958c01b1271ee8c103",
+        "android_client_info": {
+          "package_name": "com.example.herclass2"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCp6LKtCjqreJ-buUvFlISDc_2hHvJm56U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1052536693818:android:472e12e114dd6215e8c103",
+        "android_client_info": {
+          "package_name": "com.example.herclass3"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCp6LKtCjqreJ-buUvFlISDc_2hHvJm56U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
